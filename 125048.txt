@@ -1,0 +1,28 @@
+4. git init && git branch -M master
+5. git remote add origin git@github.com:dragan93/SI_2024_lab1_125048.git
+6. git add README.md && git commit -m "Initial commit"
+7. git add *.java && git commit -m "Add starter code"
+8. git push -u origin master
+9. git branch bug1 && git branch bug2
+10. git checkout bug1
+11. git add SILab1_1.java && git commit -m "Fix wrong condition in filterOddLengthStrings"
+12. git checkout bug2 
+13. git add SILab1_2.java && git commit -m " Fix wrong condition in makeBigStringFrom"
+14. git checkout bug1
+15. git add SILab1Main.java && git commit -m "Call method filterOddLengthStrings in main class"
+16. git checkout bug2
+17. git add SILab1Main.java && git commit -m " Call method makeBigStringFrom in main class"
+18. git push -u origin bug1 && git push -u origin bug2
+19. git checkout master 
+20. git merge bug1 (Nema konflikti)
+21. git push -u origin master
+22. git checkout bug2
+23. git rebase master (Ima konflikti bidejki SILab1Main.java vekje ima napraveni promeni na ista linija vo grankata bug1 koja ja spoivme so master. Edit na konfliktniot file so brishenje na markerite za konflikt <<<<<<<, =======, >>>>>>>)
+	git add SILab1Main.java
+	git rebase --conntinue
+	git push --force
+24. git checkout master
+25. git merge bug2
+26. git push -u origin master
+28. git log > logs.txt && git add logs.txt 125048.txt && git commit -m "Final commit"
+29. git push -u origin master
